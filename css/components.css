@@ -1,0 +1,71 @@
+/* Botões */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-neutral-100);
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-primary:active {
+  background-color: var(--color-accent);
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-neutral-300);
+  cursor: not-allowed;
+}
+
+/* Cards */
+.card image assets{
+  background-color: var(--color-neutral-100);
+  border-radius: 8px;
+  padding: var(--space-3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Formulários */
+input, textarea, select {
+  width: 100%;
+  padding: var(--space-2);
+  margin-bottom: var(--space-2);
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 4px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* Alerts e toasts */
+.alert {
+  padding: var(--space-2);
+  border-radius: 4px;
+  margin-bottom: var(--space-2);
+}
+
+.alert-success { background-color: #C8E6C9; color: #256029; }
+.alert-error { background-color: #FFCDD2; color: #C62828; }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-accent);
+  color: var(--color-neutral-100);
+  border-radius: 12px;
+  font-size: var(--font-size-xs);
+}

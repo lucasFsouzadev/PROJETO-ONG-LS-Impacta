@@ -1,0 +1,13 @@
+/* Espaçamentos extras */
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+
+/* Texto centralizado */
+.text-center { text-align: center; }
+
+/* Ocultar elemento */
+.hidden { display: none; }

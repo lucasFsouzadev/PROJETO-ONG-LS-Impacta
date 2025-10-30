@@ -1,0 +1,207 @@
+/* Container padrão */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header e navegação */
+.header {
+  background-color: var(--color-neutral-100);
+  padding: var(--space-2) 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: var(--space-3);
+}
+
+.nav-list li a {
+  font-weight: 600;
+  padding: var(--space-1) var(--space-2);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.nav-list li a:hover {
+  background-color: var(--color-neutral-300);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--color-primary-dark);
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-100);
+  text-align: center;
+  padding: var(--space-5) 0;
+}
+
+.hero h1 {
+  margin-bottom: var(--space-2);
+}
+
+.hero p {
+  margin-bottom: var(--space-3);
+}
+
+/* Grid 12 colunas */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-3);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: var(--space-2);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-neutral-100);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: var(--space-3);
+    border-radius: 4px;
+  }
+
+  .nav-list.nav-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero p {
+    font-size: var(--font-size-sm);
+  } 
+}
+/* ======== SEÇÃO SOBRE ======== */
+.sobre {
+  margin: 4rem 0;
+}
+
+.sobre h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary-dark);
+}
+
+.sobre-conteudo {
+  display: flex;                 
+  align-items: center;           
+  justify-content: space-between;
+  gap: 2rem;                     
+}
+
+.sobre-conteudo img {
+  width: 45%;                   
+  border-radius: 10px;
+  object-fit: cover;             
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sobre-conteudo .texto {
+  width: 50%;                    
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.sobre-conteudo ul {
+  margin-top: 1rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .sobre-conteudo {
+    flex-direction: column;      
+    text-align: center;
+  }
+
+  .sobre-conteudo img,
+  .sobre-conteudo .texto {
+    width: 100%;                 
+  }
+
+  .sobre-conteudo ul {
+    text-align: left;            
+    display: inline-block;
+  }
+}
+/* ======== CARDS DE PROJETOS ======== */
+.cards {
+  display: flex;           /* coloca os cards lado a lado */
+  flex-wrap: wrap;         /* quebra linha se não couberem */
+  gap: 2rem;               /* espaço entre os cards */
+  justify-content: center; /* centraliza os cards */
+}
+
+.card {
+  background-color: var(--color-neutral-100);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;            /* largura fixa do card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;      /* texto centralizado */
+  display: flex;
+  flex-direction: column;  /* imagem em cima, texto embaixo */
+}
+
+.card img {
+  width: 100%;             /* ocupa toda a largura do card */
+  height: 200px;           /* altura fixa para uniformidade */
+  object-fit: cover;       /* mantém proporção e corta excesso */
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card .btn {
+  margin-top: 1rem;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;             /* ocupa quase toda a largura da tela no celular */
+  }
+}

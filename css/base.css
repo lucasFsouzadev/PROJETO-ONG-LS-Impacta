@@ -1,0 +1,69 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Variáveis do design system */
+:root {
+  /* Paleta de cores */
+  --color-primary: #1E88E5;
+  --color-primary-dark: #1565C0;
+  --color-secondary: #9acce6;
+  --color-secondary-dark: #020d02;
+  --color-accent: #220928;
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #F5F5F5;
+  --color-neutral-300: #E0E0E0;
+  --color-neutral-400: #9E9E9E;
+
+  /* Tipografia */
+  --font-family: 'Arial', sans-serif;
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.25rem;   /* 20px */
+  --font-size-xl: 2rem;      /* 32px */
+
+  /* Espaçamentos modulares */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+}
+
+/* Tipografia global */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  color: var(--color-neutral-400);
+  background-color: var(--color-neutral-200);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+h1 { font-size: var(--font-size-xl); }
+h2 { font-size: var(--font-size-lg); }
+h3 { font-size: var(--font-size-md); }
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}

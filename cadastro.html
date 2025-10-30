@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro — ONG Exemplo</title>
+  <meta name="description" content="Formulário de cadastro: voluntariado e doações." />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">ONG Exemplo</h1>
+      <nav aria-label="Navegação principal">
+        <ul class="nav">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro / Doações</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <header class="page-header">
+      <h2>Cadastro — Voluntário / Doador</h2>
+      <p>Preencha os dados abaixo. Campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
+    </header>
+
+    <form id="cadastroForm" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required minlength="2" />
+
+        <label for="email">E-mail <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+
+        <label for="cpf">CPF <span aria-hidden="true">*</span></label>
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" required
+               minlength="11" maxlength="14"
+               pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+               aria-describedby="cpfHelp" placeholder="000.000.000-00" />
+
+        <label for="telefone">Telefone (celular) <span aria-hidden="true">*</span></label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" required
+               minlength="10" maxlength="15" aria-describedby="telHelp" placeholder="(11) 9 9999-9999" />
+
+        <label for="birth">Data de nascimento</label>
+        <input id="birth" name="birth" type="date" max="2007-12-31" />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="cep">CEP <span aria-hidden="true">*</span></label>
+        <input id="cep" name="cep" type="text" inputmode="numeric" required pattern="^\d{5}-\d{3}$" placeholder="00000-000" />
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" name="endereco" type="text" />
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" name="cidade" type="text" />
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" aria-label="Estado">
+          <option value="">Selecione</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <option value="MG">MG</option>
+          <!-- adicionar demais UFs conforme necessário -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferências</legend>
+
+        <label for="role">Você deseja:</label>
+        <select id="role" name="role" required>
+          <option value="">Escolha</option>
+          <option value="volunteer">Voluntariar</option>
+          <option value="donor">Doar</option>
+          <option value="both">Ambos</option>
+        </select>
+
+        <label for="message">Mensagem / Observações</label>
+        <textarea id="message" name="message" rows="4" maxlength="800"></textarea>
+      </fieldset>
+
+      <div class="form-actions">
+        <label class="checkbox">
+          <input id="terms" name="terms" type="checkbox" required />
+          Concordo com os termos e a política de privacidade.
+        </label>
+
+        <button type="submit" class="btn">Enviar cadastro</button>
+      </div>
+    </form>
+
+    <section aria-live="polite" id="formStatus" class="sr-only" role="status"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year-3"></span> ONG Exemplo</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js" defer></script>
+</body>
+</html>

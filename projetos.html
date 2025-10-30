@@ -1,73 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projetos — ONG Exemplo</title>
-  <meta name="description" content="Projetos sociais da ONG Exemplo. Saiba como participar como voluntário e como doar." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG LS Impacta — Projetos</title>
+  <meta name="description" content="Conheça os projetos sociais da ONG LS Impacta, oportunidades de voluntariado e como ajudar.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
 
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="brand">ONG Exemplo</h1>
+    <div class="container header-container">
+      <h1 class="brand">ONG LS Impacta</h1>
       <nav aria-label="Navegação principal">
         <ul class="nav">
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html" aria-current="page">Projetos</a></li>
           <li><a href="cadastro.html">Cadastro / Doações</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <h2 id="hero-title">Nossos Projetos Sociais</h2>
+      <p>Descubra nossos projetos em andamento, participe como voluntário e ajude a transformar vidas.</p>
+    </div>
+  </section>
+
   <main id="main" class="container">
-    <header class="page-header">
-      <h2>Projetos sociais</h2>
-      <p>Conheça os projetos abertos para voluntariado e doações.</p>
-    </header>
+    
+    <!-- SEÇÃO DE PROJETOS -->
+    <section class="destaques" aria-labelledby="destaques-title">
+      <h2 id="destaques-title">Projetos em Destaque</h2>
+      <div class="cards">
+        <article class="card" aria-labelledby="proj1-title">
+          <img src="imagempro.png" alt="Oficina inclusiva">
+          <div class="card-content">
+            <h3 id="proj1-title">Oficinas de Capacitação</h3>
+            <p>Formação profissional para jovens e adultos de comunidades vulneráveis, preparando-os para o mercado de trabalho.</p>
+            <a class="btn" href="cadastro.html">Participar / Doar</a>
+          </div>
+        </article>
 
-    <section class="projects-list" aria-labelledby="projects-title">
-      <h3 id="projects-title">Projetos em destaque</h3>
+        <article class="card" aria-labelledby="proj2-title">
+          <img src="imagempro1.png" alt="Campanha de saúde comunitária">
+          <div class="card-content">
+            <h3 id="proj2-title">Campanha de Saúde Comunitária</h3>
+            <p>Atendimento básico e prevenção em saúde para famílias de baixa renda.</p>
+            <a class="btn" href="cadastro.html">Participar / Doar</a>
+          </div>
+        </article>
 
-      <article class="project" aria-labelledby="p1-title">
-        <img src="assets/placeholder.jpg" alt="Oficina de habilidades" class="project-image">
-        <div class="project-content">
-          <h4 id="p1-title">Oficinas de capacitação</h4>
-          <p>Formação profissional para jovens em comunidades vulneráveis.</p>
-          <ul>
-            <li>Vagas voluntárias: 15</li>
-            <li>Indicadores: taxa de empregabilidade após 6 meses</li>
-          </ul>
-          <p><a href="cadastro.html?role=volunteer&project=1">Candidatar-se</a> • <a href="cadastro.html?role=donor&project=1">Doar</a></p>
-        </div>
-      </article>
+        <article class="card" aria-labelledby="proj3-title">
+          <img src="imagempro2.png" alt="Projeto ambiental de reciclagem">
+          <div class="card-content">
+            <h3 id="proj3-title">Projeto Ambiental</h3>
+            <p>Iniciativa de educação ambiental e reciclagem, promovendo sustentabilidade nas comunidades.</p>
+            <a class="btn" href="cadastro.html">Participar / Doar</a>
+          </div>
+        </article>
 
-      <article class="project" aria-labelledby="p2-title">
-        <img src="assets/placeholder.jpg" alt="Campanha de saúde" class="project-image">
-        <div class="project-content">
-          <h4 id="p2-title">Campanha de Saúde Comunitária</h4>
-          <p>Atendimento básico e prevenção nas comunidades.</p>
-          <p><a href="cadastro.html?role=volunteer&project=2">Candidatar-se</a> • <a href="cadastro.html?role=donor&project=2">Doar</a></p>
-        </div>
-      </article>
+        <article class="card" aria-labelledby="proj4-title">
+          <img src="imagempro3.png" alt="Aulas de reforço escolar para crianças">
+          <div class="card-content">
+            <h3 id="proj4-title">Reforço Escolar</h3>
+            <p>Aulas complementares para crianças de baixa renda, visando inclusão educacional e aprendizado de qualidade.</p>
+            <a class="btn" href="cadastro.html">Participar / Doar</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <aside class="sidebar" aria-labelledby="sidebar-title">
-      <h3 id="sidebar-title">Como ajudar</h3>
-      <p>Você pode ajudar como voluntário, doador recorrente ou divulgando nossos projetos.</p>
-      <p><a class="cta" href="cadastro.html">Quero ajudar</a></p>
-    </aside>
+    <!-- SEÇÃO VOLUNTARIADO -->
+    <section class="voluntariado" aria-labelledby="voluntariado-title">
+      <h2 id="voluntariado-title">Seja Voluntário</h2>
+      <p>Envolva-se em nossos projetos, compartilhe habilidades e ajude a transformar vidas.</p>
+      <a class="btn" href="cadastro.html">Quero me voluntariar</a>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year-2"></span> ONG Exemplo</p>
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p>&copy; <span id="year"></span> ONG LS Impacta — Todos os direitos reservados.</p>
+        <p>Rua Exemplo, 123 — Cidade, UF | <a href="mailto:contato@ongimpacta.org">contato@ongimpacta.org</a></p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">LI</a>
+      </div>
     </div>
   </footer>
 
-  <script src="js/scripts.js" defer></script>
-</body>
-</html>
+  <script>
+    // Atualiza o ano automaticamente no footer
+    document.getElementById('year').textContent = new Date().getFullYear();

@@ -5,19 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cadastro — ONG LS Impacta</title>
   <meta name="description" content="Formulário de cadastro: voluntariado e doações." />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
 
   <header class="site-header">
     <div class="container">
       <h1 class="brand">ONG LS Impacta</h1>
-      <nav aria-label="Navegação principal">
+      <nav class="site-nav" aria-label="Navegação principal">
         <ul class="nav">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html" aria-current="page">Cadastro / Doações</a></li>
+          <li><a href="index.html" data-page="inicio">Início</a></li>
+          <li><a href="projetos.html" data-page="projetos">Projetos</a></li>
+          <li><a href="index.html#sobre" data-page="sobre">Sobre</a></li>
         </ul>
       </nav>
     </div>
@@ -35,23 +43,28 @@
 
         <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
         <input id="nome" name="nome" type="text" autocomplete="name" required minlength="2" />
+        <span class="feedback"></span>
 
         <label for="email">E-mail <span aria-hidden="true">*</span></label>
         <input id="email" name="email" type="email" autocomplete="email" required />
+        <span class="feedback"></span>
 
         <label for="cpf">CPF <span aria-hidden="true">*</span></label>
         <input id="cpf" name="cpf" type="text" inputmode="numeric" required
                minlength="11" maxlength="14"
                pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
                aria-describedby="cpfHelp" placeholder="000.000.000-00" />
+   <small id="cpfHelp" class="field-help">Formato esperado: 000.000.000-00</small>
+   <span class="feedback"></span>
 
         <label for="telefone">Telefone (celular) <span aria-hidden="true">*</span></label>
         <input id="telefone" name="telefone" type="tel" inputmode="tel" required
                minlength="10" maxlength="15" aria-describedby="telHelp" placeholder="(11) 9 9999-9999" />
+   <small id="telHelp" class="field-help">Inclua o DDD. Ex: (11) 9 9999-9999</small>
+   <span class="feedback"></span>
 
         <label for="birth">Data de nascimento</label>
         <input id="birth" name="birth" type="date" max="2007-12-31" />
-
       </fieldset>
 
       <fieldset>
@@ -59,6 +72,7 @@
 
         <label for="cep">CEP <span aria-hidden="true">*</span></label>
         <input id="cep" name="cep" type="text" inputmode="numeric" required pattern="^\d{5}-\d{3}$" placeholder="00000-000" />
+        <span class="feedback"></span>
 
         <label for="endereco">Endereço</label>
         <input id="endereco" name="endereco" type="text" />
@@ -86,6 +100,7 @@
           <option value="donor">Doar</option>
           <option value="both">Ambos</option>
         </select>
+        <span class="feedback"></span>
 
         <label for="message">Mensagem / Observações</label>
         <textarea id="message" name="message" rows="4" maxlength="800"></textarea>
@@ -96,6 +111,7 @@
           <input id="terms" name="terms" type="checkbox" required />
           Concordo com os termos e a política de privacidade.
         </label>
+        <span class="feedback"></span>
 
         <button type="submit" class="btn">Enviar cadastro</button>
       </div>
@@ -105,11 +121,27 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year-3"></span> ONG LS Impacta, mudando vidas a cada instante.</a></p>
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p>&copy; <span id="year"></span> ONG LS Impacta — Todos os direitos reservados.</p>
+        <p>Rua Exemplo, 123 — Cidade, UF | <a href="mailto:contato@ongimpacta.org">contato@ongimpacta.org</a></p>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Facebook">
+          <img src="assets/facebook.svg" alt="Facebook">
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <img src="assets/instagram.svg" alt="Instagram">
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <img src="assets/linkedin.svg" alt="LinkedIn">
+        </a>
+      </div>
     </div>
   </footer>
 
-  <script src="js/scripts.js" defer></script>
+  <!-- Scripts -->
+  <script src="js/formvalidation.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

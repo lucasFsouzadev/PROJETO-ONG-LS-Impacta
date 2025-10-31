@@ -24,14 +24,20 @@
 }
 
 /* Cards */
-.card image assets{
+.card {
   background-color: var(--color-neutral-100);
   border-radius: 8px;
   padding: var(--space-3);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s;
+  overflow: hidden;
 }
-
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
 .card:hover {
   transform: translateY(-5px);
 }
@@ -50,7 +56,7 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-/* Alerts e toasts */
+/* Alertas */
 .alert {
   padding: var(--space-2);
   border-radius: 4px;
@@ -69,3 +75,96 @@ input:focus, textarea:focus, select:focus {
   border-radius: 12px;
   font-size: var(--font-size-xs);
 }
+
+/* ======== COMPONENTES DE FORMULÁRIO ======== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: var(--color-neutral-100);
+  padding: var(--space-4);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--color-neutral-400);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 4px var(--color-primary-light);
+}
+
+/* ======== FEEDBACK DE ERRO ======== */
+
+input.invalid,
+textarea.invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+.feedback {
+  font-size: 0.85rem;
+  color: red;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ======== BOTÃO DO FORMULÁRIO ======== */
+
+form .btn {
+  align-self: center;
+  width: fit-content;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+form .btn:hover {
+  background-color: var(--color-primary-dark);
+}
+/* Nota: .invalid e .feedback são definidos acima na seção "FEEDBACK DE ERRO" para evitar duplicatas */
+
+/* Auxiliar de acessibilidade: oculta visualmente, mas mantém acessível para leitores de tela */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Estado visual de carregamento/trabalho (usado durante a busca do ViaCEP) */
+input[aria-busy="true"], .loading {
+  opacity: 0.9;
+  background-color: #fffbe6;
+}
+
+/* Pequena melhoria de acessibilidade para foco visível */
+:focus:not(:focus-visible) { outline: none; }

@@ -67,3 +67,86 @@ a {
 a:hover {
   color: var(--color-primary-dark);
 }
+
+/* ======= Auxiliares de Acessibilidade e Layout ======= */
+
+/* contêiner principal centralizado com espaçamento responsivo */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+
+/* Link de atalho: visível ao selecionar o foco para usuários que utilizam o teclado */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-primary);
+  color: var(--color-neutral-100);
+  border-radius: 4px;
+  z-index: 9999;
+}
+
+/* Tornar imagens e mídias responsivas */
+img, picture, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Visível para usuários que utilizam o teclado */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Respeitar a preferência do usuário por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utilitário: visualmente oculto, mas acessível */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Atributo oculto de fallback */
+[hidden] {
+  display: none !important;
+}
+
+/* Botões padrão */
+button, .btn {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Classes utilitárias pequenas */
+.muted { color: var(--color-neutral-400); }
+.text-center { text-align: center; }

@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG LS Impacta — Projetos</title>
   <meta name="description" content="Conheça os projetos sociais da ONG LS Impacta, oportunidades de voluntariado e como ajudar.">
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
 </head>
 <body>
@@ -19,12 +20,11 @@
   <header class="site-header">
     <div class="container header-container">
       <h1 class="brand">ONG LS Impacta</h1>
-      <nav aria-label="Navegação principal">
+      <nav class="site-nav" aria-label="Navegação principal">
         <ul class="nav">
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html" aria-current="page">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro / Doações</a></li>
-          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
     </div>
@@ -49,7 +49,7 @@
           <div class="card-content">
             <h3 id="proj1-title">Oficinas de Capacitação</h3>
             <p>Formação profissional para jovens e adultos de comunidades vulneráveis, preparando-os para o mercado de trabalho.</p>
-            <a class="btn" href="cadastro.html">Participar / Doar</a>
+            <a class="btn" href="cadastro.html">Participar</a>
           </div>
         </article>
 
@@ -58,7 +58,7 @@
           <div class="card-content">
             <h3 id="proj2-title">Campanha de Saúde Comunitária</h3>
             <p>Atendimento básico e prevenção em saúde para famílias de baixa renda.</p>
-            <a class="btn" href="cadastro.html">Participar / Doar</a>
+            <a class="btn" href="cadastro.html">Participar</a>
           </div>
         </article>
 
@@ -67,7 +67,7 @@
           <div class="card-content">
             <h3 id="proj3-title">Projeto Ambiental</h3>
             <p>Iniciativa de educação ambiental e reciclagem, promovendo sustentabilidade nas comunidades.</p>
-            <a class="btn" href="cadastro.html">Participar / Doar</a>
+            <a class="btn" href="cadastro.html">Participar</a>
           </div>
         </article>
 
@@ -76,7 +76,7 @@
           <div class="card-content">
             <h3 id="proj4-title">Reforço Escolar</h3>
             <p>Aulas complementares para crianças de baixa renda, visando inclusão educacional e aprendizado de qualidade.</p>
-            <a class="btn" href="cadastro.html">Participar / Doar</a>
+            <a class="btn" href="cadastro.html">Participar</a>
           </div>
         </article>
       </div>
@@ -86,7 +86,7 @@
     <section class="voluntariado" aria-labelledby="voluntariado-title">
       <h2 id="voluntariado-title">Seja Voluntário</h2>
       <p>Envolva-se em nossos projetos, compartilhe habilidades e ajude a transformar vidas.</p>
-      <a class="btn" href="cadastro.html">Quero me voluntariar</a>
+      <a class="btn" href="cadastro.html">Cadastrar como Voluntário</a>
     </section>
 
   </main>
@@ -99,13 +99,17 @@
         <p>Rua Exemplo, 123 — Cidade, UF | <a href="mailto:contato@ongimpacta.org">contato@ongimpacta.org</a></p>
       </div>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook">FB</a>
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="LinkedIn">LI</a>
+        <a href="#" class="social-link" aria-label="Facebook">
+          <img src="assets/facebook.svg" alt="">
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <img src="assets/instagram.svg" alt="">
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <img src="assets/linkedin.svg" alt="">
+        </a>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Atualiza o ano automaticamente no footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <script src="js/main.js">

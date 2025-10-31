@@ -5,28 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG LS Impacta — Transformando Vidas</title>
   <meta name="description" content="ONG LS Impacta: projetos sociais, voluntariado e doações.">
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
 </head>
 <body>
-  <a class="skip-link" href="#main"><strong>SEJÁ BEM VINDO!</strong></a>
-
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-container">
-      <h1 class="brand">ONG LS Impacta</h1>
-      <nav aria-label="Navegação principal">
-        <ul class="nav">
-          <li><a href="index.html" aria-current="page">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro / Doações</a></li>
-          <li><a href="#sobre">Sobre nós</a></li>
-        </ul>
-      </nav>
+      <h1 class="brand">ONG LS Impacta ©</h1>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <ul class="nav">
+        <li><a href="#projetos" data-page="projetos">Projetos</a></li>
+        <li><a href="#cadastro" data-page="cadastro">Cadastro & Doações</a></li>
+        <li><a href="#sobre" data-page="sobre">Sobre nós</a></li>
+      </ul>
+    </nav>
     </div>
   </header>
 
@@ -36,10 +34,9 @@
       <h1 id="hero-title">Transformando Vidas, Impactando Comunidades</h1>
       <p>Participe de nossos projetos sociais como voluntário ou apoiador.  
          Juntos podemos gerar mudanças reais!</p>
-      <a class="btn cta" href="cadastro.html">Quero Ajudar</a>
     </div>
     <div class="hero-image">
-      
+      <img src="assets/imagemfonte.png" alt="Imagem representativa dos projetos sociais da ONG">
     </div>
   </section>
 
@@ -121,13 +118,19 @@ Acreditamos que a educação é um pilar fundamental para a transformação soci
         <p>Rua Exemplo, 123 — Cidade, UF | <a href="mailto:contato@ongimpacta.org">contato@ongimpacta.org</a></p>
       </div>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook">FB</a>
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="LinkedIn">LI</a>
+        <a href="#" class="social-link" aria-label="Facebook">
+          <img src="assets/facebook.svg" alt="">
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <img src="assets/instagram.svg" alt="">
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <img src="assets/linkedin.svg" alt="">
+        </a>
       </div>
     </div>
   </footer>
 
-  <script src="js/scripts.js" defer></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

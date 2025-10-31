@@ -47,11 +47,55 @@ body {
   color: var(--color-neutral-400);
   background-color: var(--color-neutral-200);
   line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Paleta acessível: sobrescreve variáveis do :root */
+:root {
+  --color-primary: #0057B8;
+  --color-primary-dark: #003A75;
+  --color-primary-light: #B3D4FC;
+  --color-secondary: #FFD600;
+  --color-secondary-dark: #333300;
+  --color-accent: #220928;
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #F5F5F5;
+  --color-neutral-300: #E0E0E0;
+  --color-neutral-400: #222222;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #FFD600;
+    --color-primary-dark: #333300;
+    --color-primary-light: #FFF9C4;
+    --color-secondary: #0057B8;
+    --color-secondary-dark: #003A75;
+    --color-accent: #B3D4FC;
+    --color-neutral-100: #222222;
+    --color-neutral-200: #333333;
+    --color-neutral-300: #444444;
+    --color-neutral-400: #FFFFFF;
+  }
+}
+
+.high-contrast {
+  --color-primary: #000000;
+  --color-primary-dark: #FFFFFF;
+  --color-primary-light: #FFD600;
+  --color-secondary: #FFD600;
+  --color-secondary-dark: #000000;
+  --color-accent: #FFD600;
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #000000;
+  --color-neutral-300: #FFD600;
+  --color-neutral-400: #000000;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary-dark);
   margin-bottom: var(--space-2);
+  transition: background 0.3s, color 0.3s;
 }
 
 h1 { font-size: var(--font-size-xl); }
@@ -66,6 +110,9 @@ a {
 
 a:hover {
   color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* ======= Auxiliares de Acessibilidade e Layout ======= */

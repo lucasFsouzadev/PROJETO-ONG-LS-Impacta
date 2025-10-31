@@ -1,4 +1,5 @@
 /* Botões */
+
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-neutral-100);
@@ -7,30 +8,36 @@
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
+  outline: none;
 }
-
+.btn-primary:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
+  color: var(--color-secondary);
 }
-
 .btn-primary:active {
   background-color: var(--color-accent);
 }
-
 .btn-primary:disabled {
   background-color: var(--color-neutral-300);
+  color: var(--color-neutral-400);
   cursor: not-allowed;
 }
 
 /* Cards */
+
 .card {
   background-color: var(--color-neutral-100);
   border-radius: 8px;
   padding: var(--space-3);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
+  color: var(--color-neutral-400);
 }
 .card img {
   width: 100%;
@@ -40,20 +47,26 @@
 }
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 /* Formulários */
+
 input, textarea, select {
   width: 100%;
   padding: var(--space-2);
   margin-bottom: var(--space-2);
   border: 1px solid var(--color-neutral-300);
   border-radius: 4px;
+  color: var(--color-neutral-400);
+  background: var(--color-neutral-100);
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
 }
-
 input:focus, textarea:focus, select:focus {
   border-color: var(--color-primary);
-  outline: none;
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+  background: var(--color-primary-light);
 }
 
 /* Alertas */
@@ -63,15 +76,16 @@ input:focus, textarea:focus, select:focus {
   margin-bottom: var(--space-2);
 }
 
-.alert-success { background-color: #C8E6C9; color: #256029; }
-.alert-error { background-color: #FFCDD2; color: #C62828; }
+.alert-success { background-color: #0057B8; color: #FFD600; }
+.alert-error { background-color: #C62828; color: #FFD600; }
 
 /* Badges */
+
 .badge {
   display: inline-block;
   padding: var(--space-1) var(--space-2);
   background-color: var(--color-accent);
-  color: var(--color-neutral-100);
+  color: var(--color-secondary);
   border-radius: 12px;
   font-size: var(--font-size-xs);
 }
